@@ -9,13 +9,13 @@ public class RatMazeC{
     public static void print(int sr, int sc, int er, int ec, String s, boolean[][] isVisited){
         if(sr>er || sc>ec) return;
         if(sc<0 || sr<0) return;
-        if(isVisited[sr][sc]==true) return;
+        if(isVisited[sr][sc]==true) return;    //phle aa chuke ko ->niklo
         if(sr==er && sc==ec){
             System.out.println(s);
             return;
         }
 
-        isVisited[sr][sc] = true;
+        isVisited[sr][sc] = true;    //maine visit krlia hai
         //go right
         print(sr,sc+1,er,ec,s+"R",isVisited);
 
