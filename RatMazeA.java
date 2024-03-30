@@ -4,6 +4,7 @@
  *    er -> ending row
  *    sc -> starting column
  *    ec -> end column
+ *    (backtracking)
  */
 import java.util.*;
 public class RatMazeA {
