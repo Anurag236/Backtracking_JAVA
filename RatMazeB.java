@@ -17,8 +17,7 @@ public class RatMazeB{
 
         //go down
         print(sr+1,sc,er,ec,s+"D");
-
-
+        
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
