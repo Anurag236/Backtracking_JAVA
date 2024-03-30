@@ -2,6 +2,57 @@
  * nQueen
  */
 public class nQueen {
+    public static boolean isSafe(char[][] board, int row, int col){
+        int n = board.length;
+
+        //check row -> East-West
+        for(int i=0;i<n;i++){
+            if(board[row][i]=='Q') return false;  //only col changing
+        }
+
+        //check col -> North-South
+        for(int i=0;i<n;i++){
+            if(board[i][col]=='Q') return false; //only row changing
+        }
+
+        //check North-East
+        int i = row;
+        int j = col;
+        while(i>=0 && j<n){
+            if(board[i][j]=='Q') return false;
+            i--;
+            j++;
+        }
+
+        //check South-East
+        i = row;
+        j = col;
+        while(i<n && j<n){
+            if(board[i][j]=='Q') return false;
+            i++;
+            j++;
+        }
+
+        //check South-West
+        i = row;
+        j = col;
+        while(i<n && j>=0){
+            if(board[i][j]=='Q') return false;
+            i++;
+            j--;
+        }
+
+        //check North-West
+        i = row;
+        j = col;
+        while(i>=0 && j>=0){
+            if(board[i][j]=='Q') return false;
+            i--;
+            j--;
+        }
+        return true;
+    }
+
     public static void nQueen(char [][] board, int row){
         int n = board.length;
         if(row==n){ //base case
