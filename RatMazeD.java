@@ -3,6 +3,7 @@
  *             in 2D matrix 
  */
 public class RatMazeD {
-
-    
+    public static void main(String[] args) {
+        
+    }   
 }
